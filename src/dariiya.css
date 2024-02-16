@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+::selection {
+    color: #000;
+    background: #fff;
+}
+nav {
+    position: fixed;
+    background: #1b1b1b;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 12;
+}
+nav .menu {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.menu .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.menu ul {
+    display: inline-flex;
+}
+.menu ul li {
+    list-style: none;
+    margin-left: 7px;
+}
+.menu ul li:first-child {
+    margin-left: 0;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.menu ul li a:hover {
+    background: #fff;
+    color: black;
+}
+.img {
+    background: url("../public/images/img.jpg") no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.img2 {
+    background: url("../public/images/ban2.jpg") no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.img3 {
+    background: url("../public/images/aaa.jpg") no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.img5 {
+    background: url("../public/images/baaab.jpg") no-repeat;
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.img::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+.center {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+.center .title {
+    color: #fff;
+    font-size: 55px;
+    font-weight: 600;
+}
+.center .sub_title {
+    color: #fff;
+    font-size: 52px;
+    font-weight: 600;
+}
+.center .btns {
+    margin-top: 20px;
+}
+.center .btns button {
+    height: 55px;
+    width: 170px;
+    border-radius: 5px;
+    margin: 0 10px;
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.center .btns button:first-child {
+    color: #fff;
+    background: none;
+}
+.btns button:first-child:hover {
+    background: white;
+    color: black;
+}
+.center .btns button:last-child {
+    background: white;
+    color: black;
+}
+.content {
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.h2{
+    font-family: "Poppins", sans-serif;
+    text-decoration: #1b1b1b;
+    font-weight: bolder;
+}
+.text_osnovy{
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+}
+.content p{
+    font-family: "Poppins", sans-serif;
+    text-decoration: #0c4128;
+    font-size: 18px;
+    margin: 50px;
+    max-width: 800px;
+    text-align: center;
+}
+
+
+
+/*.product-card {*/
+/*    background-color: #fff;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    border: 1px solid #ccc;*/
+/*    padding: 10px;*/
+/*    width: 300px;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    margin-top: 60px;*/
+/*}*/
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-title {
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+.product-price {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.add-to-cart-btn,
+.view-btn {
+    background-color: cornflowerblue;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.25s ease;
+}
+
+.add-to-cart-btn:hover,
+.view-btn:hover {
+    opacity: 0.8;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.product-card {
+    width: calc(33.33% - 20px); /* Вычисляем ширину карточки так, чтобы 3 карточки поместились на одной строке с небольшим отступом между ними */
+    margin-right: 20px; /* Отступ между карточками */
+    margin-bottom: 20px; /* Отступ снизу */
+    background-color: #f0f0f0; /* Цвет фона карточки */
+    padding: 20px; /* Внутренний отступ */
+    box-sizing: border-box; /* Учитываем отступы в расчетах ширины */
+}

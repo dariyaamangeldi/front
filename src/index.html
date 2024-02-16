@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpack project, kotoryi sdelannyi mnoiu</title>
+    <link rel="stylesheet" href="dariiya.css" />
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" defer></script>
+
+<body>
+<script>
+    // Вызываем функцию loadPage при загрузке страницы
+    document.addEventListener('DOMContentLoaded', function() {
+        loadPage('page.html', 'content'); // Загружаем страницу page.html и вставляем ее содержимое в элемент с id="content"
+    });
+
+    function loadPage(url, containerId) {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(html => {
+                const container = document.getElementById(containerId);
+                if (container) {
+                    container.innerHTML = html;
+                } else {
+                    throw new Error('Container element not found');
+                }
+            })
+            .catch(error => {
+                console.error('Error loading page:', error);
+            });
+    }
+</script>
+<nav>
+    <div class="menu">
+        <div class="logo">
+            <a href="#">Oneshine</a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="img"></div>
+<div class="center">
+    <div class="title">Capture every moment</div>
+    <div class="sub_title">With our cameras</div>
+    <div class="btns">
+        <button>Learn More</button>
+        <button>Subscribe</button>
+    </div>
+</div>
+
+<h1 style="text-align: center; margin-bottom: 50px">Our services and products</h1>
+
+
+<div class="product-container">
+    <div class="product-card">
+        <img src="images/brand.png" style="width: 420px">
+        <p style="text-align: center">Brand</p>
+
+    </div>
+    <div class="product-card">
+        <img src="images/sus.png" style="width: 420px">
+        <p style="text-align: center">Sustainability</p>
+
+    </div>
+    <div class="product-card">
+        <img src="images/res.png" style="width: 420px">
+        <p style="text-align: center">Research & Development</p>
+
+    </div>
+</div>
+
+<div class="content" style="margin-top: 80px;width: 100%">
+    <div class="img5"></div>
+    <p style="margin-right:500px">*1 This figure represents the established year of Fuji Photo Film. Co. Ltd., which became Fujifilm Holdings Corporation in 2006.
+
+        *2 This figure represents the revenue of FUJIFILM Holdings Corporation's “Healthcare", "Materials", and "Imaging" segment for fiscal year ended March 31, 2023, which is equivalent to FUJIFILM Corporation (consolidated).
+
+        *3 This figure represents the total number of employees of FUJIFILM Corporation and its affiliates.
+
+        *4 This figure represents the revenue of FUJIFILM Holdings Corporation (including Fujifilm Business Innovation Corp.) for fiscal year ended March 31, 2023.
+
+        *5 This figure represents the total number of employees under FUJIFILM Holdings Corporation.
+
+    </p>
+
+</div>
+
+
+<script src="bundle.js"></script>
+</body>
+</html>
+

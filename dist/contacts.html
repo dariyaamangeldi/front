@@ -1,0 +1,25 @@
+<!doctype html><html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html"><head><script defer="defer" src="main.31d6cfe0d16ae931b73c.js"></script><script defer="defer" src="styles.31d6cfe0d16ae931b73c.js"></script><link href="styles.197409454de53890bcab.css" rel="stylesheet"></head><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Webpack project, kotoryi sdelannyi mnoiu</title><link rel="stylesheet" href="contacts.css"/><script src="index.js"></script><script src="https://kit.fontawesome.com/a076d05399.js"></script><body><script>// Вызываем функцию loadPage при загрузке страницы
+    document.addEventListener('DOMContentLoaded', function() {
+        loadPage('page.html', 'content'); // Загружаем страницу page.html и вставляем ее содержимое в элемент с id="content"
+    });
+
+    function loadPage(url, containerId) {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(html => {
+                const container = document.getElementById(containerId);
+                if (container) {
+                    container.innerHTML = html;
+                } else {
+                    throw new Error('Container element not found');
+                }
+            })
+            .catch(error => {
+                console.error('Error loading page:', error);
+            });
+    }</script><nav><div class="menu"><div class="logo"><a href="#">Oneshine</a></div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="contacts.html">Contact</a></li></ul></div></nav><div class="img" src="aaa.jpg"></div><div class="center"><div class="title">Capture every moment</div><div class="sub_title">With our cameras</div><div class="btns"><button>Learn More</button> <button>Subscribe</button></div></div><h1>Our services and products</h1><div class="content"></div><script src="bundle.js"></script></body></head></html>
